@@ -1,0 +1,27 @@
+version: '3'
+services:
+  database:
+    image: mysql:latest
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: test
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: contactdb
+  app:
+    image: spring-mvc-anvi
+    volumes:
+      - wars:/opt/tomcat/webapps
+  tomcat:
+    image: ncodefresh/tomcat7:7.0.75
+    ports:
+      - 8080:8080
+    links:
+      - app
+      - database
+    volumes:
+      - app
+volumes:
+  wars:
+    driver: local
