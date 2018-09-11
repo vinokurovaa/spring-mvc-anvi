@@ -14,7 +14,7 @@ services:
     volumes:
       - wars:/opt/tomcat/webapps
   tomcat:
-    image: ncodefresh/tomcat7:7.0.75
+    image: consol/tomcat-7.0
     ports:
       - 8080:8080
     links:
