@@ -20,7 +20,7 @@ services:
       - app
       - database
     volumes:
-      - app
+      - wars:/opt/tomcat/webapps/ROOT.war
   app:
     image: spring-mvc-anvi
     volumes:
