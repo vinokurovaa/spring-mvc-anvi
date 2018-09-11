@@ -176,6 +176,16 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>(whatever version is current)</version>
+				<configuration>
+				  <!-- or whatever version you use -->
+				  <source>1.7</source>
+				  <target>1.7</target>
+				</configuration>
+			</plugin>
         </plugins>
         <finalName>ROOT</finalName>
     </build>
