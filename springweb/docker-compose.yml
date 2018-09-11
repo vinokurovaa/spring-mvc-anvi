@@ -21,7 +21,7 @@ services:
       - app
       - database
     volumes:
-      - app
+      - ./ROOT.war:/opt/tomcat/webapps/ROOT.war
 volumes:
   wars:
     driver: local
