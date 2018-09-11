@@ -9,12 +9,8 @@ services:
       MYSQL_USER: test
       MYSQL_PASSWORD: admin
       MYSQL_DATABASE: contactdb
-  app:
-    image: spring-mvc-anvi
-    volumes:
-      - wars:/opt/tomcat/webapps
   tomcat:
-    image: bitnami/tomcat:latest
+    image: bitnami/tomcat:lates
     ports:
       - 8080:8080
     environment:
@@ -25,6 +21,10 @@ services:
       - database
     volumes:
       - app
+  app:
+    image: spring-mvc-anvi
+    volumes:
+      - wars:/opt/tomcat/webapps
 volumes:
   wars:
     driver: local
