@@ -10,7 +10,7 @@ services:
       MYSQL_PASSWORD: admin
       MYSQL_DATABASE: contactdb
   tomcat:
-    image: bitnami/tomcat:lates
+    image: bitnami/tomcat:latest
     ports:
       - 8080:8080
     environment:
