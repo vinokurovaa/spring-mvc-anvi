@@ -14,7 +14,7 @@ services:
     volumes:
       - wars:/opt/tomcat/webapps
   tomcat:
-        image: bitnami/tomcat:lates
+    image: bitnami/tomcat:lates
     ports:
       - 8080:8080
     environment:
