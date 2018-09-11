@@ -17,6 +17,9 @@ services:
     image: ncodefresh/tomcat7:7.0.75
     ports:
       - 8080:8080
+    environment:
+      - TOMCAT_USERNAME=anvi
+      - TOMCAT_PASSWORD=1
     links:
       - app
       - database
