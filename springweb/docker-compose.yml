@@ -14,7 +14,7 @@ services:
     volumes:
       - wars:/opt/tomcat/webapps
   tomcat:
-    image: bitnami/tomcat:latest
+    image: ncodefresh/tomcat7:7.0.75
     ports:
       - 8080:8080
     links:
